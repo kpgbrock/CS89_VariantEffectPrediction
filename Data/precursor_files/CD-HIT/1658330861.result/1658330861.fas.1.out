@@ -1,0 +1,21 @@
+Started Wed Jul 20 08:27:52 PDT 2022
+Total seqs 1548 in 1658330861.fas.0
+..........100 finished 72 clusters 158 passed 72/158 clstr/passed 10.2% done 78.94 cpu
+..........200 finished 148 clusters 293 passed 76/135 clstr/passed 18.92% done 79.05 cpu
+..........300 finished 226 clusters 404 passed 78/111 clstr/passed 26.09% done 79.15 cpu
+..........400 finished 296 clusters 503 passed 70/99 clstr/passed 32.49% done 79.24 cpu
+..........500 finished 362 clusters 607 passed 66/104 clstr/passed 39.21% done 92.75 cpu
+..........600 finished 435 clusters 711 passed 73/104 clstr/passed 45.93% done 92.83 cpu
+..........700 finished 497 clusters 806 passed 62/95 clstr/passed 52.06% done 92.88 cpu
+..........800 finished 573 clusters 899 passed 76/93 clstr/passed 58.07% done 93.01 cpu
+..........900 finished 640 clusters 1008 passed 67/109 clstr/passed 65.11% done 97.33 cpu
+..........1000 finished 698 clusters 1086 passed 58/78 clstr/passed 70.15% done 97.47 cpu
+..........1100 finished 755 clusters 1159 passed 57/73 clstr/passed 74.87% done 97.54 cpu
+..........1200 finished 827 clusters 1250 passed 72/91 clstr/passed 80.74% done 97.61 cpu
+..........1300 finished 900 clusters 1335 passed 73/85 clstr/passed 86.24% done 97.72 cpu
+..........1400 finished 967 clusters 1420 passed 67/85 clstr/passed 91.73% done 98.74 cpu
+..........1500 finished 1035 clusters 1506 passed 68/86 clstr/passed 97.28% done 98.87 cpu
+....1548 finished 1076 clusters 1548 passed 41/42 clstr/passed 100% done 99.11 cpu
+Completed Wed Jul 20 08:28:31 PDT 2022
+
+Total CPUs on remote hosts: 0
