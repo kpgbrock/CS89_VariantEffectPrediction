@@ -87,7 +87,12 @@ class Protein():
         
         self.Y_predict = vep_nn.nn_model.predict(self.X_predict)
         
-        df_test['pred_pathogenic'] = [self.Y_predict[i][0][pathogenic_index] for i in range(n_test)]
+        # I have some weirdness with my input dimensions - hack for now
+        output_shape = self.Y_predict.shape
+        if len(output_shape)==3:
+            df_test['pred_pathogenic'] = [self.Y_predict[i][0][pathogenic_index] for i in range(n_test)]
+        else:
+            df_test['pred_pathogenic'] = [self.Y_predict[i][pathogenic_index] for i in range(n_test)]
         
         self.predictions = df_test
         
