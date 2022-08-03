@@ -1,0 +1,7 @@
+# CS89_VariantEffectPrediction
+
+Final Project for CSCI-S89, Introduction to Deep Learning
+Summer 2022
+Kelly Brock
+
+Genetic disorders can involve changes to the coding region of our DNA - or in other words, the part of our genome that can be transcribed and translated to form proteins, which are the building block of cells. In particular, missense mutations (where a change in the DNA nucleotide(s) leads to a change in amino acids in the corresponding protein sequence) are of special interest, because they can have a more ambiguous effect on the encoded protein than other types of mutations. Although the scientific community has identified thousands of these single-amino acid changes that are thought to be pathogenic (contributing to disease), genetics studies can be time-consuming and statistically underpowered, particularly in the case of rare variants. Most genetic variants found in humans remain of unknown significance. To fill this gap, a growing wealth of computational methods aim to predict whether certain missense variants are either pathogenic or benign in the context of human disease. For this case study in biology, I built 3 separate neural net architectures that take as input increasingly more information about protein sequences and the missense mutation of interest, and output a classification for that missense mutant as either pathogenic or benign. A particular challenge was how to split our available data for training and testing, so I also experimented with different split methods as well. 
