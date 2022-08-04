@@ -100,23 +100,18 @@ class Protein():
             return X_predict,Y_predict
     
     # Function to plot a heatmap of predicted pathogenicity    
-    def plot_heatmap_pathogenicity(self,set_wt_to_zero=True):
+    def plot_heatmap_pathogenicity(self):
         
+        # Only keep columns of interest
         df_test = self.predictions[['mutant_mut','mutant_pos','pred_pathogenic']].copy()
-        
-        # Optionally censor out positions where we're not making an amino acid
-        # change - e.g., if the wildtype amino acid = mutant amino acid
-        if set_wt_to_zero:
-            
-            df_test[df_test[mutant_wt == mutant_mut]] = np.nan
-        
         
         # Reshape our array to have amino acids on  y axis and position on x   
         df_test = df_test.pivot(index='mutant_mut',columns='mutant_pos',values='pred_pathogenic')
         
-        # Finally, plot the heatmap!
+        # Finally, plot the heatmap! Make sure we're setting min, max, and center
+        # for the colorbar.
         plt.figure(figsize=(15,10))
-        sns.heatmap(df_test,cmap='coolwarm',yticklabels=[a for a in self.aa])
+        sns.heatmap(df_test,cmap='coolwarm',yticklabels=[a for a in self.aa],center=0.5,vmin=0,vmax=1)
         plt.yticks(rotation=0)
         
         plt.show()
@@ -203,12 +198,15 @@ class VEP_Model():
             _,na = self.nn_model.evaluate(test_input,test_shuffle,verbose=0)
             shuffled_vals.append(na)
         
+        fig_fontsize = 16
         plt.figure(figsize=(10,10))
         plt.hist(shuffled_vals)
-        plt.xlabel('Accuracy for Shuffled Labels Trials')
-        plt.ylabel('Counts')
+        plt.xlabel('Accuracy for Shuffled Labels Trials',fontsize=fig_fontsize)
+        plt.ylabel('Counts',fontsize=fig_fontsize)
         plt.axvline(x=base_accuracy,label='Actual Accuracy')
         plt.legend(bbox_to_anchor=(1,1),loc='upper left')
+        plt.xticks(fontsize=fig_fontsize)
+        plt.yticks(fontsize=fig_fontsize)
         
         
     # Define functions to plot loss given Keras model history
