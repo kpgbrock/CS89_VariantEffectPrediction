@@ -1,7 +1,9 @@
 # CS89_VariantEffectPrediction
 
 Final Project for CSCI-S89, Introduction to Deep Learning
+
 Harvard Summer School 2022
+
 Kelly Brock
 
 Please note: these toy models were built for training purposes only, and DEFINITELY should not be used for clinical application! Please refer to <https://evemodel.org/> for an example of a more rigorous computational predictor.
