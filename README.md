@@ -6,7 +6,9 @@ Harvard Summer School 2022
 
 Kelly Brock
 
-Please note: these toy models were built for training purposes only, and DEFINITELY should not be used for clinical application! Please refer to <https://evemodel.org/> for an example of a more rigorous computational predictor.
+Installation hint for cloning: You must have Git LFS <https://git-lfs.github.com/> installed to properly download the initial ClinVar dataset.
+
+Important note: these toy models were built for training purposes only, and DEFINITELY should not be used for clinical application! Please refer to <https://evemodel.org/> for an example of a more rigorous computational predictor.
 
 Link to Youtube presentation: <https://youtu.be/qcD5TAge05U>
 
